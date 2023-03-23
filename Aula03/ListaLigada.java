@@ -46,7 +46,28 @@ public class ListaLigada{
         }
     }
 
-    public void remover(String novoValor){
+    public void remover(String valorProcurado){
+        // Pegando elemento.
+        // getTamanho é vetor
+        // Não tem o um numero depois do primeiro.
+        // Então ele é nulo
+        Elemento_No anterior = null;
+        Elemento_No atual = this.primeiro;
+        for (int i= 0; i< this.getTamanho();i++){            
+           if(atual.getValor().equalsIgnoreCase(valorProcurado)){
+            anterior.setProximo(atual.getProximo());
+            this.tamanho --;
+            atual = null;
+            break;
+
+           }
+           // Para o  anteiro percorre o vetor 
+           // Temos fazer ele receber o atual.
+           anterior = atual;
+           atual = atual.getProximo();
+        }
+
+
 
     }
 

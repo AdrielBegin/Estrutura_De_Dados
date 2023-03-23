@@ -12,10 +12,20 @@ public class Programa {
         System.out.println("Tamanho: "+lista.getTamanho());
         System.out.println("Primeito (Conteudo da bolinha = Valor) "+lista.getPrimeiro().getValor());
         System.out.println("Ultimo (Conteudo da bolinha = Valor) "+lista.getPrimeiro().getValor());
-        System.out.println(lista.get(0).getValor());
-        System.out.println(lista.get(1).getValor());
-        System.out.println(lista.get(2).getValor());
-        System.out.println(lista.get(3).getValor());
+
+        // Imprimindo a lista ligada
+        for(int i =0; i < lista.getTamanho(); i++){
+            System.out.println(lista.get(i).getValor());
+        }
+        
+        // Remover o estado de SP
+        lista.remover("SP");
+        System.out.println("Removeu estado SP");
+
+        // Imprimindo a lista ligada
+        for(int i =0; i < lista.getTamanho(); i++){
+            System.out.println(lista.get(i).getValor());
+        }
 
     }
 }
